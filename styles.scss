@@ -1,0 +1,109 @@
+body {
+    font-family: "Gravitas One", cursive;
+}
+  
+.section {
+    display: grid;
+    grid-template-columns: 2em 1fr 2em;
+    align-items: center;
+    padding: 4em 0;
+
+    @media (min-width: 800px) {
+        grid-template-columns: 1fr 720px 1fr;
+        
+        &--header {
+        min-height: 80vh;
+        }
+    }
+
+    @media (min-width: 1000px) {
+        grid-template-columns: 1fr 960px 1fr;
+    }
+
+    > * {
+        grid-column: 2 / span 1;
+    }
+
+    &:nth-child(1),
+    &:nth-child(3) {
+        background: black;
+        color: white;
+    }
+}
+  
+.parallax {
+    &__items {
+        li {
+            margin-bottom: 2em;
+            list-style-type: decimal-leading-zero;
+            list-style-position: inside;
+        }
+    }
+    @media (min-width: 800px) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 2em;
+        &__phone {
+            grid-column: 1 / span 1;
+            grid-row: 1;
+            position: relative;
+            .phone {
+                position: absolute;
+                top: 0;
+            }
+        }
+        &__items {
+            grid-column: 2 / span 1;
+            li {
+                height: 80vh;
+                border-top: 6px solid;
+                padding-top: 1rem;
+                font-size: 2em;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                span {
+                    display: block;
+                    font-size: 2em;
+                    padding-top: 1em;
+                }
+            }
+        }
+    }
+}
+  
+.phone {
+    text {
+        opacity: 0;
+        transition: 0.2s;
+    }
+    &.item-1 text:nth-of-type(1) {
+        opacity: 1;
+    }
+    &.item-2 text:nth-of-type(2) {
+        opacity: 1;
+    }
+    &.item-3 text:nth-of-type(3) {
+        opacity: 1;
+    }
+}
+  
+h1 {
+    font-size: 11vmin;
+    padding: 1em 0;
+}
+  
+.down {
+    font-size: 2em;
+    animation: upDown 0.75s infinite alternate;
+    align-self: end;
+}
+  
+@keyframes upDown {
+    from {
+        transform: translateY(0.2em);
+    }
+    to {
+        transform: translateY(-0.2em);
+    }
+}
