@@ -24,6 +24,7 @@ h2 {
 
 .title {
   padding-left: 15%;
+  padding-right: 15%;
   padding-top: 5%;
 }
 
@@ -90,8 +91,8 @@ h2 {
 }
 
 .multi-screen img{
-  width: 250px;
-  padding: 0 30px;
+  width: 17%;
+  padding: 0 1%;
 }
 
 hr {
@@ -119,6 +120,44 @@ hr {
     grid-template-columns: 1fr 960px 1fr;
   }
 }
+
+/*@media (max-width: 500px) {
+  .multi-screen {
+    height: 30vh;
+  } 
+  footer h1{
+    font-size: 50px;
+  }
+  footer {
+    height: 40vh;
+  }
+  header .title {
+    padding: 20vh 8vw;
+  }
+  header h1 {
+    font-size: 140px;
+  }
+  header h2 {
+    font-size: 75px;
+  }
+  header button {
+    font-size: 30px;
+  }
+  header #app-logo{
+    width: 70vw;
+  }
+}
+@media (max-width: 800px) {
+  .multi-screen{
+    height:75%;
+  } 
+}
+@media (min-width: 800px) {
+  footer h1 {
+    font-size: 60px;
+  }
+}*/
+
 .section:nth-child(2) > * {
   grid-column: 2/span 1;
 }
@@ -189,29 +228,4 @@ hr {
 h1 {
   font-size: 11vmin;
   padding: 1em 0;
-}
-
-.down {
-  font-size: 2em;
-  -webkit-animation: upDown 0.75s infinite alternate;
-          animation: upDown 0.75s infinite alternate;
-  align-self: end;
-}
-
-@-webkit-keyframes upDown {
-  from {
-    transform: translateY(0.2em);
-  }
-  to {
-    transform: translateY(-0.2em);
-  }
-}
-
-@keyframes upDown {
-  from {
-    transform: translateY(0.2em);
-  }
-  to {
-    transform: translateY(-0.2em);
-  }
 }
